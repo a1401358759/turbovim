@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 
 local mapping = {}
 
-mapping.register = function(range, gruop_name, bufnr)
-    local group_keymap = mapping[range][gruop_name]
+mapping.register = function(range, group_name, bufnr)
+    local group_keymap = mapping[range][group_name]
     for _, key_map in ipairs(group_keymap) do
         -- noremap : default = true
         local options = {
@@ -37,6 +37,14 @@ mapping.global = {
         {{"i", "c", "t"}, "<m-j>", "<down>"},
         {{"i", "c", "t"}, "<m-h>", "<left>"},
         {{"i", "c", "t"}, "<m-l>", "<right>"},
+        -- Ctrl + s 保存
+        {{"i"}, "<C-s>", "<ESC>:w<CR>", "silent"},
+        {{"n"}, "<C-s>", ":w<CR>", "silent"},
+        -- 复制粘贴快捷键
+        {{"v"}, "<C-y>", [["+y]], "silent"},
+        {{"n"}, "<C-p>", [["+p]], "silent"},
+        {{"i"}, "<C-p>", [[<ESC>"+pa]], "silent"},
+
         {
             {"n", "x"},
             "j",
@@ -161,7 +169,7 @@ mapping.global = {
         {{"n"}, "<leader>tcb", ":Translate ZH -source=EN -output=floating -comment<cr>", "silent"},
         {{"n"}, "<leader>teb", ":Translate EN -source=ZH -output=floating -comment<cr>", "silent"},
         {{"n"}, "<leader>tcw", "viw:Translate ZH -source=EN -output=floating<cr>", "silent"},
-        {{"n"}, "<leader>tew", "viw:Translate EN -source=ZH -output=floating<cr>", "silent"},
+        {{"n"}, "<leader>tew", "viw:Translate EN -source=ZH -output=floating<cr>", "silent"}
     },
     packer = {
         {{"n"}, "<leader>ps", "<cmd>PackerSync<cr>", "silent"},
@@ -231,67 +239,67 @@ mapping.global = {
         {
             {"n"},
             "<leader>ff",
-            "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fg",
-            "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fo",
-            "<cmd>lua require('telescope.builtin').oldfiles(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').oldfiles(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fh",
-            "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').resume(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>ft",
-            "<cmd>lua require('telescope.builtin').help_tags(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').help_tags(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fm",
-            "<cmd>lua require('telescope.builtin').marks(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').marks(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fi",
-            "<cmd>lua require('telescope.builtin').highlights(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').highlights(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fb",
-            "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>fp",
-            "<cmd>lua require('telescope.builtin').pickers(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').pickers(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>f/",
-            "<cmd>lua require('telescope.builtin').search_history(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').search_history(require('telescope.themes'))<cr>",
             "silent"
         },
         {
             {"n"},
             "<leader>f:",
-            "<cmd>lua require('telescope.builtin').command_history(require('telescope.themes').get_dropdown({}))<cr>",
+            "<cmd>lua require('telescope.builtin').command_history(require('telescope.themes'))<cr>",
             "silent"
         }
     },

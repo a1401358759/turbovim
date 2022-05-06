@@ -10,6 +10,8 @@ require("nvim-treesitter.configs").setup(
         ensure_installed = "all",
         -- synchronous download highlighting support
         sync_install = false,
+        -- List of parsers to ignore installing (for "all")
+        ignore_install = { "php", "phpdoc" },
         -- highlight related
         highlight = {
             enable = true,
