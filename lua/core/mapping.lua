@@ -46,6 +46,8 @@ mapping.global = {
         {{"i"}, "<C-p>", [[<ESC>"+pa]], "silent"},
         -- 关闭当前buffer
         {{"n"}, "<C-x>", ":Bwipeout<CR>", "silent"},
+        -- markdown preview
+        {{"n"}, "<leader>mp", ":MarkdownPreview<CR>", "silent"},
 
         {
             {"n", "x"},
