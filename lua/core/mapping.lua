@@ -44,6 +44,8 @@ mapping.global = {
         {{"v"}, "<C-y>", [["+y]], "silent"},
         {{"n"}, "<C-p>", [["+p]], "silent"},
         {{"i"}, "<C-p>", [[<ESC>"+pa]], "silent"},
+        -- 关闭当前buffer
+        {{"n"}, "<C-x>", ":Bwipeout<CR>", "silent"},
 
         {
             {"n", "x"},
@@ -361,7 +363,10 @@ mapping.buffer = {
         {{"n"}, "<leader>gl", "<cmd>Gitsigns toggle_current_line_blame<cr>", "silent"},
         {{"n"}, "<leader>gd", "<cmd>Gitsigns toggle_deleted<cr>", "silent"},
         {{"n"}, "<leader>gv", "<cmd>Gitsigns diffthis<cr>", "silent"},
-        {{"n", "v"}, "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", "silent"}
+        {{"n", "v"}, "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", "silent"},
+        {{"n", "v"}, "<leader>gs", ":Gitsigns stage_hunk<CR>", "silent"},
+        {{"n"}, "<leader>gS", "<cmd>Gitsigns stage_buffer<CR>", "silent"},
+        {{"n"}, "<leader>gp", "<cmd>Gitsigns preview_hunk<CR>", "silent"}
     },
     venn = {
         {{"n"}, "<c-j>", "<C-v>j:VBox<CR>", "silent"},
