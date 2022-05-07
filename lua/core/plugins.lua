@@ -200,6 +200,12 @@ local packer_install_plugins = {
         disable = false,
         after = {"nvim-cmp"}
     },
+    ["neoclide/coc.nvim"] = {
+        load_file = false,
+        disable = true,
+        after = {"impatient.nvim"},
+        branch = "release",
+    },
     -------------
     ---- dap ----
     -------------
