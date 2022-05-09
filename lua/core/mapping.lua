@@ -37,13 +37,9 @@ mapping.global = {
         {{"i", "c", "t"}, "<m-j>", "<down>"},
         {{"i", "c", "t"}, "<m-h>", "<left>"},
         {{"i", "c", "t"}, "<m-l>", "<right>"},
-        -- Ctrl + s 保存
-        {{"i"}, "<C-s>", "<ESC>:w<CR>", "silent"},
-        {{"n"}, "<C-s>", ":w<CR>", "silent"},
-        -- 复制粘贴快捷键
-        {{"v"}, "<C-y>", [["+y]], "silent"},
-        {{"n"}, "<C-p>", [["+p]], "silent"},
-        {{"i"}, "<C-p>", [[<ESC>"+pa]], "silent"},
+        {{"v"}, "<C-y>", '"+y', "silent"},
+        {{"n"}, "<C-p>", '"+p', "silent"},
+        {{"i"}, "<C-p>", '<ESC>"+pa', "silent"},
         -- 关闭当前buffer
         {{"n"}, "<C-x>", ":Bwipeout<CR>", "silent"},
         -- markdown preview

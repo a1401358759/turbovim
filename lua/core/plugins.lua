@@ -451,6 +451,11 @@ local packer_install_plugins = {
         load_file = true,
         disable = false,
         after = {"impatient.nvim"}
+    },
+    ["goolord/alpha-nvim"] = {
+        load_file = true,
+        disable = false,
+        after = {"impatient.nvim"}
     }
 }
 
