@@ -14,6 +14,9 @@ require("bufferline").setup(
         options = {
             -- diagnostics source
             diagnostics = "nvim_lsp",
+            numbers = function(opts)
+                return string.format("%s·%s", opts.raise(opts.id), opts.lower(opts.ordinal))
+            end,
             indicator_icon = "▎",
             buffer_close_icon = "",
             modified_icon = "●",

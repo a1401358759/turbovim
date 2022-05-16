@@ -61,6 +61,11 @@ local packer_install_plugins = {
     -------------
     --- theme ---
     -------------
+    ["ful1e5/onedark.nvim"] = {
+        load_file = true,
+        disable = false,
+        after = {"nvim-scrollbar"}
+    },
     ["catppuccin/nvim"] = {
         as = "catppuccin",
         load_file = true,
