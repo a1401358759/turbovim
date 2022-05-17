@@ -37,9 +37,6 @@ mapping.global = {
         {{"i", "c", "t"}, "<m-j>", "<down>"},
         {{"i", "c", "t"}, "<m-h>", "<left>"},
         {{"i", "c", "t"}, "<m-l>", "<right>"},
-        {{"v"}, "<C-y>", '"+y', "silent"},
-        {{"n"}, "<C-p>", '"+p', "silent"},
-        {{"i"}, "<C-p>", '<ESC>"+pa', "silent"},
         -- 关闭当前buffer
         {{"n"}, "<C-x>", ":Bwipeout<CR>", "silent"},
         -- markdown preview
@@ -346,6 +343,7 @@ mapping.buffer = {
         {{"n"}, "<c-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>", "silent"},
         {{"n"}, "<leader>cn", "<cmd>Lspsaga rename<cr>", "silent"}
     },
+    -- 大纲预览
     aerial = {
         {{"n"}, "<leader>2", "<cmd>AerialToggle! right<cr>", "silent"},
         {{"n"}, "{", "<cmd>AerialPrev<cr>", "silent"},
@@ -418,13 +416,13 @@ mapping.plugin = {
         change_view_mode = "<leader>v"
     },
     comment = {
-        normal_line_toggle = "gcc",
-        normal_block_toggle = "gCC",
-        normal_prev_rows = "gcO",
-        normal_next_rows = "gco",
-        noremal_end_line = "gcA",
-        visual_line_toggle = "gc",
-        visual_block_toggle = "gC"
+        normal_line_toggle = "<leader>cl",
+        normal_block_toggle = "<leader>cb",
+        normal_prev_rows = "<leader>cp",
+        normal_next_rows = "<leader>co",
+        normal_end_line = "<leader>ce",
+        visual_line_toggle = "<leader>cl",
+        visual_block_toggle = "<leader>cb"
     },
     toggleterm = {
         exit_insert = "<esc>",

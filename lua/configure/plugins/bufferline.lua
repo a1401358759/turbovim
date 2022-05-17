@@ -24,7 +24,7 @@ require("bufferline").setup(
             left_trunc_marker = "",
             right_trunc_marker = "",
             -- split style："slant" | "thick" | "thin"
-            separator_style = "thin",
+            separator_style = "slant",
             -- show diagnostics icons
             ---@diagnostic disable-next-line: unused-local
             diagnostics_indicator = function(count, level, diagnostics_dict, context)

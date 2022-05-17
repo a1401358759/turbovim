@@ -48,14 +48,14 @@ return {
     settings = {
         python = {
             analysis = {
-                typeCheckingMode = "basic", -- off, basic, strict
+                typeCheckingMode = "off", -- off, basic, strict
                 useLibraryCodeForTypes = true,
-                autoImportCompletions = true,
+                autoImportCompletions = false,
                 diagnosticSeverityOverrides = {
                     reportUndefinedVariable = "error",
                     reportMissingTypeStubs = "none",
                     reportIncompleteStub = "none",
-                    reportInvalidStubStatement = "none"
+                    reportInvalidStubStatement = "none",
                 }
             }
         }
