@@ -72,7 +72,7 @@ catppuccin.setup(
     }
 )
 
-vim.cmd([[colorscheme catppuccin]])
+-- vim.cmd([[colorscheme catppuccin]])
 
 -- lsp_signature and translate
 if options.transparency_background then
