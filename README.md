@@ -1,5 +1,11 @@
 # Documentation
 
+## install
+
+```shell
+git@github.com:a1401358759/turbovim.git
+```
+
 ## illustrate
 
 Self-use neovim configuration. Written entirely in Lua, based on neovim 0.7.
@@ -277,6 +283,10 @@ MarkdownPreview: Preview markdown files
 LspInfo: View LSP running status
 LSPInstallInfo: View LSP download status
 ```
+
+## thanks
+
+[https://github.com/askfiy/nvim](https://github.com/askfiy/nvim)
 
 ## some resource links
 
